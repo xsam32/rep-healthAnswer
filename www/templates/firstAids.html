@@ -1,0 +1,11 @@
+<ion-view view-title="First Aids">
+  <ion-content>
+    
+	<ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/firstAid/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
