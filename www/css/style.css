@@ -39,6 +39,11 @@
         background: url(../images/right480x130.png);
         width: 1px;
     }
+    .has-header {
+    top: 120px;
+    margin-left: 20px;
+    margin-right: 25px;
+}
 }
 
 .platform-android .bar .title {
