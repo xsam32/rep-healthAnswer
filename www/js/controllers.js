@@ -26,11 +26,12 @@ var startDB = function() {
 
 var myControllers = angular.module('starter.controllers', [])
 
-.controller('introCtrl', function($scope) {
+.controller('introCtrl', function($scope, $location) {
     var i = 1;
     var max = 6;
     var loop = function() {
         if (i == max) {
+            //$location.path('/#/app/homeMenu')
             location = '/#/app/homeMenu';
         } else {
             setTimeout(function() {
