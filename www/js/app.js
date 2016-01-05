@@ -25,14 +25,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-
+        .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+    })
 
     .state('intro', {
-        url: '/intro',
-        controller: 'introCtrl',
-        templateUrl: 'templates/intro.html'
-    })
-    .state('app.homeMenu', {
+            url: '/intro',
+            controller: 'introCtrl',
+            templateUrl: 'templates/intro.html'
+        })
+        .state('app.homeMenu', {
             url: '/homeMenu',
             views: {
                 'menuContent': {
@@ -50,7 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-    .state('app.firstAids', {
+        .state('app.firstAids', {
             url: '/firstAids',
             views: {
                 'menuContent': {
@@ -145,7 +150,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
-    // if none of the above states are matched, use this as the fallback
+        // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/intro');
 });
