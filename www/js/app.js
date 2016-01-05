@@ -82,6 +82,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'symptomCtrl'
         }
       }
+    })
+  .state('app.clickMale', {
+      url: '/clickMale',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/clickMale.html',
+          controller: 'clickMaleCtrl'
+        }
+      }
+    })
+  .state('app.clickFemale', {
+      url: '/clickFemale',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/clickFemale.html',
+          controller: 'clickFemaleCtrl'
+        }
+      }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro');
