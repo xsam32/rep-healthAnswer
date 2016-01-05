@@ -1,1 +1,53 @@
-/* Empty. Add your own CSS if you like */
+.logo {
+    background: url(../images/logo_02.png) no-repeat;
+    height: 165px;
+    width: 636px;
+    background-position: center;
+}
+
+.logoLeft {
+    background: url(../images/logo_01.png);
+}
+
+.logoRight {
+    background: url(../images/logo_03.png);
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+}
+
+.has-header {
+    top: 160px;
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        background: url(../images/logo480x130.png) no-repeat;
+        height: 130px;
+        width: 100px;
+        background-position: center;
+    }
+    .logoLeft {
+        background: url(../images/left480x130.png);
+        width: 1px;
+    }
+    .logoRight {
+        background: url(../images/right480x130.png);
+        width: 1px;
+    }
+}
+
+.platform-android .bar .title {
+    font-size: 0px;
+    line-height: 44px;
+}
+
+.text {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #060;
+    font-weight: bold;
+}
