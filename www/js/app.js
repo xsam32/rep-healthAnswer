@@ -42,7 +42,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
       url: '/homeMenu',
       views: {
         'menuContent': {
-          templateUrl: 'templates/homeMenu.html'
+          templateUrl: 'templates/homeMenu.html',
+          controller: 'menuCtrl'
         }
       }
     })
