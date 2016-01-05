@@ -20,6 +20,8 @@
 
 .has-header {
     top: 160px;
+    margin-left: 20px;
+    margin-right: 25px;
 }
 
 @media screen and (max-width: 480px) {

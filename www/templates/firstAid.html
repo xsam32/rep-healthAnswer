@@ -10,9 +10,14 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
-  <ion-content>
-    
-	
-
-  </ion-content>
+    <ion-content>
+    <div ng-bind-html="detailHTML"></div>
+<!--         <div class="item item-text-wrap">
+            <ion-list>
+                <ion-item ng-repeat="playlist in details">
+                    <p>{{playlist.detail}}</p>
+                </ion-item>
+            </ion-list>
+        </div> -->
+    </ion-content>
 </ion-view>
