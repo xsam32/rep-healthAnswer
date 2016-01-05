@@ -95,7 +95,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                     controller: 'clickFemaleCtrl'
                 }
             }
-        });
+        })
 
     .state('app.appointment', {
             url: '/appointment',
