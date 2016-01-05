@@ -26,13 +26,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
     $stateProvider
 
         .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
-    })
+            url: '/app',
+            abstract: true,
+            templateUrl: 'templates/menu.html',
 
-    .state('intro', {
+        })
+        .state('intro', {
             url: '/intro',
             controller: 'introCtrl',
             templateUrl: 'templates/intro.html'
@@ -82,8 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
-    .state('app.clickMale', {
+        .state('app.clickMale', {
             url: '/clickMale',
             views: {
                 'menuContent': {
@@ -101,8 +99,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
-    .state('app.appointment', {
+        .state('app.appointment', {
             url: '/appointment',
             views: {
                 'menuContent': {
