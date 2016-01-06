@@ -26,13 +26,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
     $stateProvider
 
         .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html',
-        controller: 'AppCtrl'
-    })
+            url: '/app',
+            abstract: true,
+            templateUrl: 'templates/menu.html',
 
-    .state('intro', {
+        })
+        .state('intro', {
             url: '/intro',
             controller: 'introCtrl',
             templateUrl: 'templates/intro.html'
@@ -82,8 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
-    .state('app.clickMale', {
+        .state('app.clickMale', {
             url: '/clickMale',
             views: {
                 'menuContent': {
@@ -101,6 +99,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+
         .state('app.checkSymptom', {
             url: '/checkSymptom/:SymptomCat/:sex',
             views: {
@@ -160,6 +159,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+
         .state('app.healthTest', {
             url: '/healthTest',
             views: {
@@ -170,4 +170,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
         })
         // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/intro');
+    //$urlRouterProvider.otherwise('/intro');
 });

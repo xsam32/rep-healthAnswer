@@ -26,12 +26,17 @@ var startDB = function() {
 
 var myControllers = angular.module('starter.controllers', [])
 
-.controller('introCtrl', function($scope) {
+.controller('introCtrl', function($scope, $location,$state) {
     var i = 1;
     var max = 6;
     var loop = function() {
         if (i == max) {
-            location = '/#/app/homeMenu';
+
+            //location = '/#/app/homeMenu';
+
+            $state.transitionTo('app.homeMenu', null, {'reload':true});
+
+            //$location.path('/app/homeMenu');
         } else {
             setTimeout(function() {
                 i++;
@@ -41,6 +46,15 @@ var myControllers = angular.module('starter.controllers', [])
         }
     }
     loop();
+    // $timeout(function() {
+    //     alert("OK");
+    //     $location.path('/app/homeMenu');
+    // }, 3000);
+
+    // setTimeout(function() {
+    //     $location.path('/app/homeMenu');
+    // }, 500);
+
 
     startDB();
 
@@ -2396,7 +2410,7 @@ function transaction_error(tx, error) {
 
 function populateDB_success() {
     dbCreated = true;
-    console.log("dbCreated : "+dbCreated);
+    console.log("dbCreated : " + dbCreated);
     //db.transaction(getEmployees, transaction_error);
     //db.transaction(getExtentData, transaction_error);
     //db.transaction(getExtentData2, transaction_error);

@@ -33,10 +33,10 @@ myControllers.controller('firstAidCtrl', function($scope, $stateParams) {
                 var detailHTML = details.toString();
 
                 $scope.detailHTML = detailHTML;
-                
+
             }
         }
-        console.log(detailHTML);
+        //console.log(detailHTML);
         /*if( len == 0 )
 	{
 		alert("ยังไม่มีข้อมูล");
