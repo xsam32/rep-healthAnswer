@@ -1,0 +1,38 @@
+<ion-view view-title="Symptom Detail">
+    <ion-nav-bar class="bar-stable">
+        <table border="" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td class="logoLeft"></td>
+                <td class="logo"></td>
+                <td class="logoRight"></td>
+            </tr>
+        </table>
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content scroll="true">
+        <div ng-show="!diseasesThai" class="text-center">
+            <br>
+            <b>{{symDetail}}</b>
+        </div>
+        <div ng-hide="!diseasesThai">
+            <div class="text-center">
+                <b>{{diseasesThai}}</b>
+            </div>
+            <!-- <br>      -->
+            <br>
+            <p><b>นิยาม</b></p>
+            <p ng-bind-html="define"></p>
+            <p><b>สาเหตุ</b></p>
+            <p ng-bind-html="cause"></p>
+            <p><b>อาการ</b></p>
+            <p ng-bind-html="sign"></p>
+            <p><b>การวินิจฉัย</b></p>
+            <p ng-bind-html="consider"></p>
+            <p><b>การรักษา</b></p>
+            <p ng-bind-html="remedy"></p>
+            <p><b>การป้องกัน</b></p>
+            <p ng-bind-html="protect"></p>
+        </div>
+    </ion-content>
+</ion-view>

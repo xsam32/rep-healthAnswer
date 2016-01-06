@@ -100,6 +100,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
             }
         })
 
+        .state('app.symptomDetail', {
+            url: '/symptomDetail',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/symptomDetail.html',
+                    controller: 'symptomDetailCtrl'
+                }
+            }
+        })
+
         .state('app.checkSymptom', {
             url: '/checkSymptom/:SymptomCat/:sex',
             views: {
@@ -118,6 +128,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+
         .state('app.showImg', {
             url: '/showImg',
             views: {
@@ -169,6 +180,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
             }
         })
 
+
         .state('app.healthTest', {
             url: '/healthTest',
             views: {
@@ -177,7 +189,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-        // if none of the above states are matched, use this as the fallback
+
+    // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/intro');
     //$urlRouterProvider.otherwise('/intro');
 });
