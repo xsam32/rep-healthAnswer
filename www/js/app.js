@@ -101,6 +101,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+        .state('app.checkSymptom', {
+            url: '/checkSymptom/:SymptomCat/:sex',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/checkSymptom.html',
+                    controller: 'checkSymptomCtrl'
+                }
+            }
+        })
+        .state('app.findSymptom', {
+            url: '/findSymptom/:disIds/:sex',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/findSymptom.html',
+                    controller: 'findSymptomCtrl'
+                }
+            }
+        })
 
     .state('app.appointment', {
             url: '/appointment',

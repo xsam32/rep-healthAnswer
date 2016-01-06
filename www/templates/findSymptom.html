@@ -1,4 +1,4 @@
-<ion-view view-title="Female">
+<ion-view view-title="findSymptom">
     <ion-nav-bar class="bar-stable">
         <table border="" cellpadding="0" cellspacing="0" width="100%">
             <tr>
@@ -11,18 +11,15 @@
         </ion-nav-back-button>
     </ion-nav-bar>
   <ion-content>
-    <div class="list list-inset">
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <ng-repeat="playlist in playlists">
-                    <input type="text" placeholder="Search" ng-model="test">
-            </label>
-        </div>
+    
+<div class="item item-text-wrap" style="text-align:center">
+    <b>มีความเสี่ยงที่จะเป็น</b>
+  </div>
         <div class="item item-text-wrap">
   <ion-list>
-      <ion-item ng-repeat="playlist in playlists | filter:test" href="#/app/checkSymptom/{{playlist.id}}/f">
+      <ion-item ng-repeat="playlist in playlists" href="#/app/showImg/{{playlist.id}}">
        
-      <h2> {{playlist.row}}. {{playlist.title}}</h2>
+      <h2>{{playlist.title}}</h2>
       <p>{{playlist.titleEng}}</p>
           
       </ion-item>
