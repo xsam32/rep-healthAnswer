@@ -99,12 +99,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+
         .state('app.symptomDetail', {
             url: '/symptomDetail',
             views: {
                 'menuContent': {
                     templateUrl: 'templates/symptomDetail.html',
                     controller: 'symptomDetailCtrl'
+                }
+            }
+        })
+
+        .state('app.checkSymptom', {
+            url: '/checkSymptom/:SymptomCat/:sex',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/checkSymptom.html',
+                    controller: 'checkSymptomCtrl'
+                }
+            }
+        })
+        .state('app.findSymptom', {
+            url: '/findSymptom/:disIds/:sex',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/findSymptom.html',
+                    controller: 'findSymptomCtrl'
                 }
             }
         })

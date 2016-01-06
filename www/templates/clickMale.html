@@ -11,13 +11,22 @@
         </ion-nav-back-button>
     </ion-nav-bar>
   <ion-content>
-    
+    <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <ng-repeat="playlist in playlists">
+                    <input type="text" placeholder="Search" ng-model="test">
+            </label>
+        </div>
+        <div class="item item-text-wrap">
 	<ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/firstAid/{{playlist.id}}">
-        {{playlist.title}}
+      <ion-item ng-repeat="playlist in playlists | filter:test" href="#/app/checkSymptom/{{playlist.id}}/m">
+       
+      <h2> {{playlist.row}}. {{playlist.title}}</h2>
+      <p>{{playlist.titleEng}}</p>
+    
       </ion-item>
     </ion-list>
-
-
+  </div>
   </ion-content>
 </ion-view>
