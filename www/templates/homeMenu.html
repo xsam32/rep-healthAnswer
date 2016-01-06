@@ -25,7 +25,7 @@
                         </div>
                         <div class="col">
                             <div class="mnudesc">
-                                <a href="http://www.phyathai.com/doctor_search.aspx?LangID=th&Name=&HospitalCode=0&SpecialtyID=0">
+                                <a ng-click="openFindDoctor(finddoctor)">
                                     <img src="images/ico_finddoc.png" />
                                 </a>
                                 <p class="text">Find Doctor</p>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col">
                             <div class="">
-                                <a href="#/app/askExpert">
+                                <a ng-click="openAskExpert(askexpert)">
                                     <img src="images/ico_askExpert.png" />
                                 </a>
                                 <p class="text">Ask Expert</p>
@@ -44,7 +44,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="mnudesc">
-                                <a href="#/app/homePage">
+                                <a ng-click="openHomePage(homepage)">
                                     <img src="images/ico_homepage.png" />
                                 </a>
                                 <p class="text">Home Page</p>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="col">
                             <div class="mnudesc">
-                                <a href="#/app/promotion">
+                                <a ng-click="openPromotion(promotion)">
                                     <img src="images/ico_promotion.png" />
                                 </a>
                                 <p class="text">Promotion</p>

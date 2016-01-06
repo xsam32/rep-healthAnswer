@@ -115,14 +115,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-        .state('app.findDoctor', {
-            url: '/findDoctor',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/findDoctor.html'
-                }
-            }
-        })
         .state('app.homePage', {
             url: '/homePage',
             views: {
