@@ -118,6 +118,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
+        .state('app.showImg', {
+            url: '/showImg',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/showImg.html',
+                    controller: 'showImgCtrl'
+                }
+            }
+        })
 
     .state('app.appointment', {
             url: '/appointment',
