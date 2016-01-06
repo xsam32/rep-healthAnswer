@@ -26,34 +26,34 @@ var startDB = function() {
 
 var myControllers = angular.module('starter.controllers', [])
 
-.controller('introCtrl', function($scope, $location) {
-    // var i = 1;
-    // var max = 6;
-    // var loop = function() {
-    //     if (i == max) {
+.controller('introCtrl', function($scope, $location,$state) {
+    var i = 1;
+    var max = 6;
+    var loop = function() {
+        if (i == max) {
 
-    //         //location = '/#/app/homeMenu';
+            //location = '/#/app/homeMenu';
 
-    //         $state.transitionTo('app.homeMenu', null, {'reload':true});
+            $state.transitionTo('app.homeMenu', null, {'reload':true});
 
-    //         //$location.path('/app/homeMenu');
-    //     } else {
-    //         setTimeout(function() {
-    //             i++;
-    //             document.getElementById('imgIntro').src = "img/intro320x480/sp00" + i + ".png";
-    //             loop();
-    //         }, 1000);
-    //     }
-    // }
-    // loop();
+            //$location.path('/app/homeMenu');
+        } else {
+            setTimeout(function() {
+                i++;
+                document.getElementById('imgIntro').src = "img/intro320x480/sp00" + i + ".png";
+                loop();
+            }, 1000);
+        }
+    }
+    loop();
     // $timeout(function() {
     //     alert("OK");
     //     $location.path('/app/homeMenu');
     // }, 3000);
 
-    setTimeout(function() {
-        $location.path('/app/homeMenu');
-    }, 2500);
+    // setTimeout(function() {
+    //     $location.path('/app/homeMenu');
+    // }, 500);
 
 
     startDB();
