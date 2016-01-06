@@ -140,5 +140,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
             }
         })
         // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/intro');
+    $urlRouterProvider.otherwise('app/homeMenu');
+    //$urlRouterProvider.otherwise('/intro');
 });

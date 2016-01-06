@@ -55,6 +55,7 @@ var myControllers = angular.module('starter.controllers', [])
         $location.path('/app/homeMenu');
     }, 2500);
 
+
     startDB();
 
 })

@@ -1,4 +1,4 @@
-myControllers.controller('menuCtrl', ['$scope', '$cordovaInAppBrowser', function($scope, $cordovaInAppBrowser) {
+myControllers.controller('menuCtrl', ['$scope', function($scope) {
 
 $scope.finddoctor = "http://www.phyathai.com/doctor_search.aspx?LangID=th&Name=&HospitalCode=0&SpecialtyID=0";
 $scope.askexpert = "http://www.phyathai.com/contactus_mobile.aspx?LangID=en";
