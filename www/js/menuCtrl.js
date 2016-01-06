@@ -2,7 +2,7 @@ myControllers.controller('menuCtrl', ['$scope', function($scope) {
 
 $scope.finddoctor = "http://www.phyathai.com/doctor_search.aspx?LangID=th&Name=&HospitalCode=0&SpecialtyID=0";
 $scope.askexpert = "http://www.phyathai.com/contactus_mobile.aspx?LangID=en";
-$scope.homepage = "http://www.phyathai.com/contactus_mobile.aspx?LangID=en";
+$scope.homepage = "http://www.phyathai.com/home/th";
 $scope.promotion = "http://www.phyathai.com/promotionmain/PYT2/th";
 
 $scope.openFindDoctor = function(finddoctor){
