@@ -34,7 +34,30 @@ myControllers.controller('findSymptomCtrl', function($scope, $stateParams) {
         }
     }
 
+    // $scope.showImg = function() {
+    //     var disIds = "";
 
+    //     $('input[type="checkbox"]').each(function() {
+    //         if ($(this).is(':checked')) {
+    //             // perform operation for checked
+    //             // _checkBox[id_checkBox] = $(this).attr('name');
+    //             //alert("ค่าที่ "+id_checkBox+" ส่งไป = "+_checkBox[id_checkBox]);
+    //             if (disIds) {
+    //                 // disIds = disIds + "," + $(this).attr('name');
+    //             } else {
+    //                 disIds = disIds + $(this).attr('name');
+    //             }
+
+
+    //             alert($(this).attr('name'));
+    //             // id_checkBox++;
+
+    //         } else {
+    //             // perform operation for unchecked
+    //         }
+    //     });
+    //         window.location.href = '#/app/showImg/' + disIds + "/" + $stateParams.sex;
+    // }
 
     /////////// End Retrieve All Task ////////////////
 });

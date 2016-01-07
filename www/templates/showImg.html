@@ -10,21 +10,39 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
-  <ion-content>
-    
-	
-  <button class="button button-full button-stable" ng-click = "share()" >
-  Share
-</button>
-	<div
- style="text-align:center">
-            <table  width="100%" border="0" cellspacing="2" cellpadding="0">  
-  <tr>  
-    <td> <img src="images/result_2.png" id="male" onclick="location.href='#/app/clickMale'" border="0" >
-  </tr>  
-</table>  
+    <ion-content>
+        <div data-role="content">
+            <div>
+                <table width="255" height="406" border="0" align="center" background="images/result_3.png" style="margin: 0 auto;">
+                    <tr>
+                        <td height="300" colspan="2" align="center" valign="top">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <p>
+                                <input type="text" style="border: none; width: 180px; text-align: center;" readonly id="tt" value="{{title}}">
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="122">&nbsp;</td>
+                        <td width="123" align="center">&nbsp;</td>
+                    </tr>
+                </table>
+
+
+                <div class="row" style="text-align: center;">
+                    <div class="col">
+                        <button class="button icon-left ion-star button-positive" ng-click="share()">Share</button>
+                    </div>
+                    <div class="col">
+                        <a class="button icon-right ion-chevron-right button-calm" href="#/app/symptomDetail/{{disIds}}">Detail</a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-
-
-  </ion-content>
+    </ion-content>
 </ion-view>

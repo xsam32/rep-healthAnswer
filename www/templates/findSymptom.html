@@ -17,7 +17,7 @@
   </div>
         <div class="item item-text-wrap">
   <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/showImg">
+      <ion-item ng-repeat="playlist in playlists" href="#/app/showImg/{{playlist.id}}/{{playlist.title}}">
        
       <h2>{{playlist.title}}</h2>
       <p>{{playlist.titleEng}}</p>

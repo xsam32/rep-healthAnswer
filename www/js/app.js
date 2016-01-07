@@ -100,7 +100,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
             }
         })
         .state('app.symptomDetail', {
-            url: '/symptomDetail',
+            url: '/symptomDetail/:disIds',
             views: {
                 'menuContent': {
                     templateUrl: 'templates/symptomDetail.html',
@@ -127,7 +127,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
             }
         })
         .state('app.showImg', {
-            url: '/showImg',
+            url: '/showImg/:disIds/:DiseasesThai',
             views: {
                 'menuContent': {
                     templateUrl: 'templates/showImg.html',

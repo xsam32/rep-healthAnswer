@@ -49,7 +49,7 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
                 // _checkBox[id_checkBox] = $(this).attr('name');
                 //alert("ค่าที่ "+id_checkBox+" ส่งไป = "+_checkBox[id_checkBox]);
                 if (disIds) {
-                    disIds = disIds + "," + $(this).attr('name');
+                    // disIds = disIds + "," + $(this).attr('name');
                 } else {
                     disIds = disIds + $(this).attr('name');
                 }
