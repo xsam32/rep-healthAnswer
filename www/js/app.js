@@ -135,46 +135,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-        .state('app.appointment', {
-            url: '/appointment',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/appointment.html'
-                }
-            }
-        })
-        .state('app.askExpert', {
-            url: '/askExpert',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/askExpert.html'
-                }
-            }
-        })
-        .state('app.findDoctor', {
-            url: '/findDoctor',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/findDoctor.html'
-                }
-            }
-        })
-        .state('app.homePage', {
-            url: '/homePage',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/homePage.html'
-                }
-            }
-        })
-        .state('app.promotion', {
-            url: '/promotion',
-            views: {
-                'menuContent': {
-                    templateUrl: 'templates/promotion.html'
-                }
-            }
-        })
+
 
 
         .state('app.healthTest', {
