@@ -99,7 +99,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
         .state('app.symptomDetail', {
             url: '/symptomDetail',
             views: {
@@ -109,7 +108,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
         .state('app.checkSymptom', {
             url: '/checkSymptom/:SymptomCat/:sex',
             views: {
@@ -128,7 +126,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
         .state('app.showImg', {
             url: '/showImg',
             views: {
@@ -138,8 +135,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
                 }
             }
         })
-
-    .state('app.appointment', {
+        .state('app.appointment', {
             url: '/appointment',
             views: {
                 'menuContent': {
