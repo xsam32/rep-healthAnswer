@@ -1,9 +1,10 @@
-myControllers.controller('symptomDetailCtrl', function($scope) {
+myControllers.controller('symptomDetailCtrl', function($scope,$stateParams) {
+
 
     startDB();
     result_value_detail()
-    
-	var _diseases_id = 1;
+    var disIds = $stateParams.disIds;
+	var _diseases_id = disIds;
 
     function result_value_detail(_diseases_id) {
         //$('#iframe_result_detail').attr('src',"http://203.155.165.20/Diseasesdetail/"+url+".htm");

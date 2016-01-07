@@ -40,11 +40,42 @@
         width: 1px;
     }
     .has-header {
-    top: 120px;
-    margin-left: 20px;
-    margin-right: 25px;
+        top: 120px;
+        margin-left: 20px;
+        margin-right: 25px;
+    }
+    .symptom {
+        background: url(images/ico_symptom.png);
+    }
+    .findDoctor {}
+    .askExpert {}
+    .homePage {}
+    .appointment {}
+    .map {}
+    .firstAid {}
+    .promotion {}
+    .healthQuote {}
 }
+
+.symptom {
+    background: url(images/ico_symptom.png);
 }
+
+.findDoctor {}
+
+.askExpert {}
+
+.homePage {}
+
+.appointment {}
+
+.map {}
+
+.firstAid {}
+
+.promotion {}
+
+.healthQuote {}
 
 .platform-android .bar .title {
     font-size: 0px;
