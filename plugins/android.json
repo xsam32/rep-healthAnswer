@@ -30,6 +30,12 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.healthanswer984019"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "com.ionicframework.healthanswer984019"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.healthanswer984019"
         }
     },
     "dependent_plugins": {}
