@@ -10,24 +10,16 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
     </ion-nav-bar>
-  <ion-content>
-    
-        <div class="item item-text-wrap">
-
-      
-       
-      <ion-list>
-<ion-item ng-repeat="playlist in playlists" >
-
-  <ion-checkbox class="custom" name="{{playlist.cat}}" >{{playlist.title}}</ion-checkbox>
-
-</ion-item>
-<button class="button button-full button-positive" ng-click = "findSymptom()" >
-  Result
-</button>
-</ion-list>
-      
-   
-  </div>
-  </ion-content>
+    <ion-content>
+        <div>
+            <ion-list>
+                <ion-item>
+                    <ion-checkbox ng-repeat="playlist in playlists" class="custom" name="{{playlist.cat}}">{{playlist.title}}</ion-checkbox>
+                </ion-item>
+                <button class="button button-full button-positive" ng-click="findSymptom()">
+                    Result
+                </button>
+            </ion-list>
+        </div>
+    </ion-content>
 </ion-view>
