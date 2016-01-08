@@ -24,7 +24,66 @@
     margin-right: 25px;
 }
 
+.sideImg {
+    width: 145px;
+    height: 145px;
+}
+
+#symptom {
+    background: url(../images/icon145x145/icon_symptom.png);
+}
+
+#findDoctor {
+    background: url(../images/icon145x145/icon_findDoctor.png);
+}
+
+#askExpert {
+    background: url(../images/icon145x145/icon_askExpert.png);
+}
+
+#homePage {
+    background: url(../images/icon145x145/icon_homepage.png);
+}
+
+#appointment {
+    background: url(../images/icon145x145/icon_appointment.png);
+}
+
+#mapicon {
+    background: url(../images/icon145x145/icon_map.png);
+}
+
+#firstAid {
+    background: url(../images/icon145x145/icon_firstAid.png);
+}
+
+#promotion {
+    background: url(../images/icon145x145/icon_promotion.png);
+}
+
+#healthQuote {
+    background: url(../images/icon145x145/icon_healthQuote.png);
+}
+
+.platform-android .bar .title {
+    font-size: 0px;
+    line-height: 44px;
+}
+
+.text {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #060;
+    font-weight: bold;
+}
+.scroll-bar-indicator
+{
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
+    
     .logo {
         background: url(../images/logo480x130.png) no-repeat;
         height: 130px;
@@ -44,48 +103,43 @@
         margin-left: 20px;
         margin-right: 25px;
     }
-    .symptom {
-        background: url(images/ico_symptom.png);
+    .sideImg {
+    width: 60px;
+    height: 60px;
+}
+    #symptom {
+        background: url(../images/ico_symptom.png);
+ 
     }
-    .findDoctor {}
-    .askExpert {}
-    .homePage {}
-    .appointment {}
-    .map {}
-    .firstAid {}
-    .promotion {}
-    .healthQuote {}
-}
+    #findDoctor {
+        background: url(../images/ico_finddoc.png);
+  
+    }
+    #askExpert {
+        background: url(../images/ico_askExpert.png);
+  
+    }
+    #homePage {
+        background: url(../images/ico_homepage.png);
 
-.symptom {
-    background: url(images/ico_symptom.png);
-}
+    }
+    #appointment {
+        background: url(../images/ico_appointment.png);
 
-.findDoctor {}
+    }
+    #mapicon {
+        background: url(../images/ico_map.png);
 
-.askExpert {}
-
-.homePage {}
-
-.appointment {}
-
-.map {}
-
-.firstAid {}
-
-.promotion {}
-
-.healthQuote {}
-
-.platform-android .bar .title {
-    font-size: 0px;
-    line-height: 44px;
-}
-
-.text {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    color: #060;
-    font-weight: bold;
+    }
+    #firstAid {
+        background: url(../images/ico_firstAid.png);
+ 
+    }
+    #promotion {
+        background: url(../images/ico_promotion.png);
+  
+    }
+    #healthQuote {
+        background: url(../images/icon60x60/icon_healthQuote.png);
+    }
 }
