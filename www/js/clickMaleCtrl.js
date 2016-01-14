@@ -1,10 +1,14 @@
-myControllers.controller('clickMaleCtrl', function($scope) {
+myControllers.controller('clickMaleCtrl', function($scope,$ionicLoading) {
     startDB();
     $scope.playlists = [];
     ///////////  Retrieve All Task ////////////////
     retrieveAllTask();
 
     function retrieveAllTask() {
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
+
         console.log('Start retrive all task transaction.');
         db.transaction(getEmployees, retrieveAllTaskError);
 
@@ -40,6 +44,7 @@ myControllers.controller('clickMaleCtrl', function($scope) {
                 $scope.playlists.push(SymptomList);
             }
         }
+        $ionicLoading.hide();
         console.log($scope.playlists);
     }
 
@@ -47,6 +52,6 @@ myControllers.controller('clickMaleCtrl', function($scope) {
     function retrieveAllTaskError(err) {
         navigator.notification.alert("Error processing SQL: " + err.code);
     }
-
+ 
     /////////// End Retrieve All Task ////////////////
 });

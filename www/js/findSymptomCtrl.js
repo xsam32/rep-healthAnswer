@@ -1,11 +1,13 @@
-myControllers.controller('findSymptomCtrl', function($scope, $stateParams) {
+myControllers.controller('findSymptomCtrl', function($scope, $stateParams, $ionicLoading) {
     startDB();
     $scope.playlists = [];
     var disIds = $stateParams.disIds;
     // alert($stateParams.disIds);
     ///////////  Retrieve All Task ////////////////
     // retrieveAllTask();
-
+    $ionicLoading.show({
+        template: 'Loading...'
+    });
     db.transaction(getResult_executeSql, transaction_error);
 
     function getResult_executeSql(tx) {
@@ -20,18 +22,19 @@ myControllers.controller('findSymptomCtrl', function($scope, $stateParams) {
         var len = results.rows.length;
         console.log("Tasks amount: " + len);
         if (len == 0) {
-        	
+
         } else {
             for (var i = 0; i < len; i++) {
                 var SymptomList = {
                     title: results.rows.item(i).DiseasesThai,
-                    titleEng : results.rows.item(i).DiseasesEng,
+                    titleEng: results.rows.item(i).DiseasesEng,
                     id: results.rows.item(i).DiseasesId
                         // $('#SymptomList').append('<li><a href="#page111" onClick="xxx(' + Symptom.SymptomCat + ');setHide(11);">' +(i2++)+"."+ Symptom.SymptomThai + '<br><br><p>'+ Symptom.SymptomEng +'</p></a></li>');
                 }
                 $scope.playlists.push(SymptomList);
             }
         }
+        $ionicLoading.hide();
     }
 
     // $scope.showImg = function() {

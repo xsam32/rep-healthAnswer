@@ -1,14 +1,16 @@
-myControllers.controller('symptomDetailCtrl', function($scope,$stateParams) {
+myControllers.controller('symptomDetailCtrl', function($scope, $stateParams, $ionicLoading) {
 
 
     startDB();
     result_value_detail()
     var disIds = $stateParams.disIds;
-	var _diseases_id = disIds;
+    var _diseases_id = disIds;
 
     function result_value_detail(_diseases_id) {
         //$('#iframe_result_detail').attr('src',"http://203.155.165.20/Diseasesdetail/"+url+".htm");
-        
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
         _diseases_id = _diseases_id;
         db.transaction(getDiseasesDtl, transaction_error);
 
@@ -29,7 +31,7 @@ myControllers.controller('symptomDetailCtrl', function($scope,$stateParams) {
             $scope.symDetail = "ยังไม่มีข้อมูล";
         } else {;
             var item = {
-            	diseasesThai: results.rows.item(0).DiseasesThai,
+                diseasesThai: results.rows.item(0).DiseasesThai,
                 define: results.rows.item(0).define,
                 cause: results.rows.item(0).cause,
                 sign: results.rows.item(0).sign,
@@ -46,5 +48,6 @@ myControllers.controller('symptomDetailCtrl', function($scope,$stateParams) {
             $scope.protect = item.protect;
 
         }
+        $ionicLoading.hide();
     }
 });

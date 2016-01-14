@@ -1,4 +1,4 @@
-myControllers.controller('firstAidCtrl', function($scope, $stateParams) {
+myControllers.controller('firstAidCtrl', function($scope, $stateParams, $ionicLoading) {
     startDB();
     var detail = $stateParams.firstAidsId;
     var id = parseInt(detail)
@@ -6,6 +6,9 @@ myControllers.controller('firstAidCtrl', function($scope, $stateParams) {
     getEmerDetail_transaction();
 
     function getEmerDetail_transaction() {
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
         var id = parseInt(detail)
         EmerCode = id;
         db.transaction(getEmerDetail_executeSql, transaction_error);
@@ -47,6 +50,7 @@ myControllers.controller('firstAidCtrl', function($scope, $stateParams) {
             $(div).append("" + results.rows.item(0).EmerDetail + "");
         $('#detailContainer').html(div).trigger('create');
     }*/
+        $ionicLoading.hide();
     }
 
     function getEmerDetail_error(err) {

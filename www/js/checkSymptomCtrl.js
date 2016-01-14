@@ -1,4 +1,4 @@
-myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
+myControllers.controller('checkSymptomCtrl', function($scope, $stateParams, $ionicLoading) {
     startDB();
     $scope.playlists = [];
     var _dis_id = $stateParams.SymptomCat;
@@ -7,7 +7,9 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
     // alert($stateParams.SymptomId);
 
     function callExten() {
-
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
         db.transaction(getExtentData, transaction_error);
     }
 
@@ -24,7 +26,7 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
         var len2 = results.rows.length;
         console.log(len2);
         // $('#listExtentdata').html('');
-        // var ul = $("<ul id='listExtentdata' data-role='listview' data-inset='true' ></ul>");	
+        // var ul = $("<ul id='listExtentdata' data-role='listview' data-inset='true' ></ul>"); 
         for (var i = 0; i < len2; i++) {
             var checkList = {
                     cat: results.rows.item(i).SymptomCat,
@@ -34,7 +36,7 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
                 // $(ul).append('<input type="checkbox" name="' + Symptom2.SymptomCat + '" id="checkbox-'+ ids +'a" class="custom" /><label for="checkbox-'+ ids +'a">'+Symptom2.SymptomThai +'</label>');
             $scope.playlists.push(checkList);
         }
-
+        $ionicLoading.hide();
         console.log($scope.playlists);
         // $('#listExtentdata').html(ul).trigger('create');
         // $('#id_page111').css('display', 'block');
@@ -61,8 +63,9 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams) {
             } else {
                 // perform operation for unchecked
             }
+
         });
-        	window.location.href = '#/app/findSymptom/' + disIds + "/" + $stateParams.sex;
+        window.location.href = '#/app/findSymptom/' + disIds + "/" + $stateParams.sex;
     }
 
 });

@@ -1,10 +1,13 @@
-myControllers.controller('firstAidsCtrl', function($scope) {
-  startDB();
+myControllers.controller('firstAidsCtrl', function($scope, $ionicLoading) {
+    startDB();
     $scope.playlists = [];
     ///////////  Retrieve All Task ////////////////
     retrieveAllTask();
 
     function retrieveAllTask() {
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
         console.log('Start retrive all task transaction.');
         db.transaction(retrieveAllTaskTransaction, transaction_error);
 
@@ -31,6 +34,7 @@ myControllers.controller('firstAidsCtrl', function($scope) {
                 $scope.playlists.push(item);
             }
         }
+        $ionicLoading.hide();
         console.log($scope.playlists);
     }
 
