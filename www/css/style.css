@@ -28,6 +28,15 @@
     margin-bottom: 50px;
 }
 
+.sideImg {
+    width: 145px;
+    height: 145px;
+}
+
+#symptom {
+    background: url(../images/icon145x145/icon_symptom.png);
+}
+
 #findDoctor {
     background: url(../images/icon145x145/icon_findDoctor.png);
 }
