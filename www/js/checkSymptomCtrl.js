@@ -44,7 +44,7 @@ myControllers.controller('checkSymptomCtrl', function($scope, $stateParams, $ion
 
     $scope.findSymptom = function() {
         var disIds = "";
-
+        
         $('input[type="checkbox"]').each(function() {
             if ($(this).is(':checked')) {
                 // perform operation for checked

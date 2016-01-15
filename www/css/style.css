@@ -24,13 +24,8 @@
     margin-right: 25px;
 }
 
-.sideImg {
-    width: 145px;
-    height: 145px;
-}
-
-#symptom {
-    background: url(../images/icon145x145/icon_symptom.png);
+.margin-bottom {
+    margin-bottom: 50px;
 }
 
 #findDoctor {
@@ -77,13 +72,12 @@
     color: #060;
     font-weight: bold;
 }
-.scroll-bar-indicator
-{
+
+.scroll-bar-indicator {
     display: none;
 }
 
 @media screen and (max-width: 480px) {
-    
     .logo {
         background: url(../images/logo480x130.png) no-repeat;
         height: 130px;
@@ -103,43 +97,46 @@
         margin-left: 20px;
         margin-right: 25px;
     }
+    .margin-bottom {
+        margin-bottom: 50px;
+    }
     .sideImg {
-    width: 60px;
-    height: 60px;
-}
+        width: 60px;
+        height: 60px;
+    }
     #symptom {
         background: url(../images/ico_symptom.png);
- 
     }
     #findDoctor {
         background: url(../images/ico_finddoc.png);
-  
     }
     #askExpert {
         background: url(../images/ico_askExpert.png);
-  
     }
     #homePage {
         background: url(../images/ico_homepage.png);
-
     }
     #appointment {
         background: url(../images/ico_appointment.png);
-
     }
     #mapicon {
         background: url(../images/ico_map.png);
-
     }
     #firstAid {
         background: url(../images/ico_firstAid.png);
- 
     }
     #promotion {
         background: url(../images/ico_promotion.png);
-  
     }
     #healthQuote {
         background: url(../images/icon60x60/icon_healthQuote.png);
     }
+}
+
+.bar-footer {
+    height: 60px;
+}
+
+.button {
+    height: 50px;
 }
